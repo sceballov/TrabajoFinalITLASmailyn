@@ -62,3 +62,9 @@ Puedes usar Swagger UI, que se abrirá automáticamente al ejecutar la API:
 
 ## Preparación para la Expansión Futura
 [cite_start]La API está diseñada con una base bien organizada y una estructura modular para facilitar la adición de nuevas funcionalidades y endpoints en las etapas siguientes. [cite: 134]
+
+Etapa 2: Delegados, Funciones Anónimas y Uso de Action y Func
+
+En esta segunda etapa del proyecto, el enfoque principal ha sido enriquecer la flexibilidad y modularidad de la API de Gestión de Tareas. Se han integrado de manera estratégica los conceptos de delegados personalizados, funciones anónimas y los tipos integrados Action y Func de C#. El objetivo primordial fue encapsular y reutilizar la lógica de negocio, simplificando el código y permitiendo una adaptación dinámica del comportamiento de funcionalidades críticas como validaciones de entrada, notificaciones de eventos y cálculos derivados. Esta implementación asegura que el sistema sea más dinámico, robusto y escalable para futuras expansiones.
+
+
