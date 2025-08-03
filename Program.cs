@@ -7,7 +7,6 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 builder.Services.AddDbContext<TaskManagerContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("TaskManagerDB"));
@@ -22,11 +21,11 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-//using (var scope = app.Services.CreateScope())
-//{
-//    var Context = scope.ServiceProvider.GetRequiredService<TaskManagerContext>();
-//    Context.Database.Migrate(); 
-//}
+using (var scope = app.Services.CreateScope())
+{
+    var Context = scope.ServiceProvider.GetRequiredService<TaskManagerContext>();
+    Context.Database.Migrate();
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
