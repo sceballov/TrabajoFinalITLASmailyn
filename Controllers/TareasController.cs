@@ -30,9 +30,10 @@ namespace TaskManager.Controllers
             await _service.GetTaskByIdAllAsync(id);
 
         [HttpGet("filter")]
-        public async Task<ActionResult<Response<IEnumerable<Tareas>>>> GetFilteredTasks(
-            [FromQuery] string status = null,
-            [FromQuery] DateTime? dueDate = null) =>
+        // CORRECCIÓN: El tipo de retorno para una lista debe ser Response<Tareas>
+        public async Task<ActionResult<Response<Tareas>>> GetFilteredTasks(
+                [FromQuery] string status = null,
+                [FromQuery] DateTime? dueDate = null) =>
             await _service.GetFilteredTasksAsync(status, dueDate);
 
         [HttpPost]
